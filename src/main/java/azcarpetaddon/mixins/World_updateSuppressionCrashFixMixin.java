@@ -1,7 +1,7 @@
-package carpet_extension.mixins;
+package azcarpetaddon.mixins;
 
-import carpet_extension.ExampleSimpleSettings;
-import carpet_extension.helpers.ThrowableSuppression;
+import azcarpetaddon.AzCarpetAddonSettings;
+import azcarpetaddon.helpers.ThrowableSuppression;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 public class World_updateSuppressionCrashFixMixin {
     @Inject(method = "updateNeighbor", at = @At(value="INVOKE", target = "Lnet/minecraft/util/crash/CrashReport;create(Ljava/lang/Throwable;Ljava/lang/String;)Lnet/minecraft/util/crash/CrashReport;"),locals =  LocalCapture.CAPTURE_FAILHARD)
             public void checkUpdateSuppression(BlockPos sourcePos, Block sourceBlock, BlockPos neighborPos, CallbackInfo ci, BlockState state,Throwable throwable){
-                if(ExampleSimpleSettings.updateSuppressionCrashFix && (throwable instanceof ThrowableSuppression || throwable instanceof StackOverflowError)){
+                if(AzCarpetAddonSettings.updateSuppressionCrashFix && (throwable instanceof ThrowableSuppression || throwable instanceof StackOverflowError)){
                     throw new ThrowableSuppression("Update suppression");
                 }
             }

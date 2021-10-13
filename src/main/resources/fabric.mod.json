@@ -14,7 +14,7 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/azcarpetaddon/logo_pixel.png",
 
   "environment": "*",
   "entrypoints": {
@@ -22,7 +22,7 @@
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "az-carpet-addon.mixins.json"
   ],
 
   "depends": {
