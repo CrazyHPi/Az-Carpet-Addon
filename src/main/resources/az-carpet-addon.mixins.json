@@ -3,7 +3,6 @@
   "package": "azcarpetaddon.mixins",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "CrashReport_noopMixin",
     "MinecraftServer_updateSuppressionCrashFixMixin",
     "World_updateSuppressionCrashFixMixin"
   ],

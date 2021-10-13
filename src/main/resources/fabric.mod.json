@@ -3,13 +3,14 @@
   "id": "az-carpet-addon",
   "version": "${version}",
 
-  "name": "Example Carpet Extension Mod",
+  "name": "Az Carpet Addon",
   "description": "Yet another carpet extension mainly made for 1.15.2",
   "authors": [
     "Az_Crazy_H"
   ],
   "contact": {
     "homepage": "nothing yet",
+    "issues": "https://github.com/CrazyHPi/Az-Carpet-Addon/issues",
     "sources": "https://github.com/CrazyHPi/Az-Carpet-Addon"
   },
 
@@ -19,6 +20,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
+      "azcarpetaddon.AzCarpetAddonMod"
     ]
   },
   "mixins": [

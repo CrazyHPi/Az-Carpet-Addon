@@ -10,10 +10,15 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.network.ServerPlayerEntity;
 
-public class AzCarpetAddon implements CarpetExtension{
+public class AzCarpetAddonServer implements CarpetExtension{
+
     @Override
     public String version(){
         return "Az Carpet Addon";
+    }
+
+    public static void loadExtension(){
+        CarpetServer.manageExtension(new AzCarpetAddonServer());
     }
 
     @Override

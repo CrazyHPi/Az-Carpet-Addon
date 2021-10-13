@@ -6,9 +6,10 @@ import carpet.settings.Validator;
 import carpet.utils.Messenger;
 import net.minecraft.server.command.ServerCommandSource;
 
-import static carpet.settings.RuleCategory.BUGFIX;
+import static carpet.settings.RuleCategory.*;
 
 public class AzCarpetAddonSettings {
+
     public static final String AZ = "AZ";
 
     @Rule(
